@@ -1,0 +1,405 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    background-color: #DAD5B7;
+}
+
+/* Cabeçalho */
+
+#cabeçalho{
+    width: 100%;
+    height: 10vh;
+    background-color: #C2B79B;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+#logo{
+    width: 4%;
+    height: 85%;
+    margin-left: 1%;
+}
+
+#paginas{
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+    height: 45%;
+    margin-left: 30%;
+}
+
+#produtos{
+    background-color: #DAD5B7;
+    width: 16%;
+    height: 100%;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 27px;
+    font-weight: 550;
+    font-family: "Kumbh Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: black;
+}
+
+#quem_somos{
+    background-color: #DAD5B7;
+    width: 25%;
+    height: 100%;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 27px;
+    font-weight: 550;
+    font-family: "Kumbh Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: black;
+}
+#contato{
+    background-color: #DAD5B7;
+    width: 15%;
+    height: 100%;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 27px;
+    font-weight: 550;
+    font-family: "Kumbh Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    text-decoration: none;
+    color: black;
+}
+#cadastro{
+    background-color: #DAD5B7;
+    width: 17%;
+    height: 100%;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 27px;
+    font-weight: 550;
+    font-family: "Kumbh Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: black;
+}
+#pedidos{
+    background-color: #DAD5B7;
+    width: 15%;
+    height: 100%;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 27px;
+    font-weight: 550;
+    font-family: "Kumbh Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: black;
+}
+
+#busca{
+    background-color: #665E52;
+    width: 3%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 1%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#lupa{
+    width: 50%;
+    height: 50%;
+}
+
+#inicio{
+    background-color: #665E52;
+    width: 3%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 1%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#casa{
+    width: 45%;
+    height: 45%;
+}
+
+
+#produtos:hover{
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+}
+
+#quem_somos:hover{
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+}
+
+#contato:hover{
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+}
+
+#cadastro:hover{
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+}
+
+#pedidos:hover{
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+}
+
+#check_busca:hover + #busca{
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+}
+#inicio:hover{
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+}
+
+/* Busca */
+
+#check_busca{
+    width: 3%;
+    height: 60%;
+    border-radius: 10px;
+    position: absolute;
+    left: 91%;
+    top:2vh;
+    opacity: 0;
+}
+
+#check_busca:checked ~ #bloco_busca{
+    visibility: visible;
+}
+
+#bloco_busca{
+    width: 12%;
+    height: 35vh;
+    background-color: #665E52;
+    border-radius: 15px;
+    display: flex;
+    flex-direction:column ;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Kumbh Sans", sans-serif;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid #665E52 5px;
+    position: absolute;
+    top: 100%;
+    left: 86.5%;
+    visibility: hidden;
+    z-index: 99;
+}
+
+.itens{
+    text-decoration: none;
+    color: #DAD5B7;
+    border-bottom: solid #DAD5B7 2px;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#busca_CI{
+border-bottom: 0px;
+}
+
+
+#busca_teclado:hover{
+    color: #C2B79B;
+    transition: 0.3s;
+}
+
+#busca_fone:hover{
+    color: #C2B79B;
+    transition: 0.3s;
+}
+
+#busca_mouse:hover{
+    color: #C2B79B;
+    transition: 0.3s;
+}
+
+#busca_VR:hover{
+    color: #C2B79B;
+    transition: 0.3s;
+}
+
+#busca_CI:hover{
+    color: #C2B79B;
+    transition: 0.3s;
+}
+
+/* Principal */
+
+#bloco_img{
+    background-color: #665E52;
+    width: 65%;
+    height: 150vh;
+    font-family: "Kumbh Sans", sans-serif;
+    display: inline-block;
+    margin-top: 10vh;
+}
+
+#img{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-self: center;
+}
+
+#fundo_img{
+    width: 100%;
+    height: 45%;
+    background-color: #504a41;
+}
+
+.desc{
+    color: white;
+    font-size: 40px;
+    margin-left: 2%;
+    font-weight: 550;
+}
+
+#desc_nome{
+    margin-top: 3%;
+}
+
+#preco{
+    width: 34%;
+    height: 100vh;
+    display: inline-block;
+    vertical-align: top;
+    font-family: "Kumbh Sans", sans-serif;
+    position: fixed;
+    margin-top: 10vh;
+}
+
+#preco_antigo{
+    text-decoration: line-through;
+    font-weight: 200;
+    font-size: 42px;
+    color: rgb(32, 32, 32);
+    margin-top: 4%;
+    margin-left: 2%;
+}
+
+#preco_novo{
+    color: black;
+    font-size: 60px;
+    margin-left: 2%;
+    font-weight: 550;
+}
+
+#desconto{
+    font-size: 30px;
+    margin-left: 2%;
+}
+
+#descricao{
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+#parc{
+    width: 100%;
+    display: inline-block;
+}
+
+.rs{
+    display: inline-block;
+    font-weight: 600;
+}
+
+#a{
+    margin-left: 2%;
+}
+
+#estoque{
+    color: green;
+    font-size: 18px;
+    margin-left: 2%;
+    margin-top: 15%;
+}
+
+#compra{
+    width: 80%;
+    height: 8%;
+    background-color: #C2B79B;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 30px;
+    margin-left: 2%;
+    margin-top: 3%;
+}
+
+#compra:hover{
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7)
+}
+
+#compra_carrinho{
+    width: 80%;
+    height: 8%;
+    background-color: #C2B79B;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 30px;
+    margin-top: 4%;
+    margin-left: 2%;
+}
+
+#compra_carrinho:hover{
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7)
+}
+
+#frete{
+    width: 25%;
+    height: 3%;
+    background-color: green;
+    border-radius: 30px;
+    margin-top: 2%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#txt_desc{
+    margin-top: 4%;
+    margin-left: 2%;
+    font-size: 21px;
+    color: white;
+}
